@@ -1,6 +1,6 @@
 <?php
 
-  class User
+  class Usuario
   {
     public string $nome;
     public string $sobreNome;
@@ -69,26 +69,26 @@
       return $this->senha;
     }
 
+    public function printarDadosUsuario($nome, $sobreNome, $email, $contadorSeguidores, $login)
+    {
+
+      echo "+--------------Dados do Usuário----------------+\n";
+      echo "| Nome: {$nome}                                   |\n";
+      echo "<---------------------------------------------->\n";
+      echo "| Sobrenome: {$sobreNome}                             |\n";
+      echo "<---------------------------------------------->\n";
+      echo "| Email: {$email}                          |\n";
+      echo "<---------------------------------------------->\n";
+      echo "| Seguidores: {$contadorSeguidores}                             |\n";
+      echo "<---------------------------------------------->\n";
+      echo "| Login: {$login}                            |\n";
+      echo "*----------------------------------------------*\n";
+
+    }
+
   }
 
-  function printUser($nome, $sobreNome, $email, $contadorSeguidores, $login)
-  {
-
-    echo "+--------------Dados do Usuário----------------+\n";
-    echo "| Nome: {$nome}                                   |\n";
-    echo "<---------------------------------------------->\n";
-    echo "| Sobrenome: {$sobreNome}                             |\n";
-    echo "<---------------------------------------------->\n";
-    echo "| Email: {$email}                          |\n";
-    echo "<---------------------------------------------->\n";
-    echo "| Seguidores: {$contadorSeguidores}                             |\n";
-    echo "<---------------------------------------------->\n";
-    echo "| Login: {$login}                            |\n";
-    echo "*----------------------------------------------*\n";
-
-  }
-
-  $objUsuario = new User();
+  $objUsuario = new Usuario();
   $nome = $objUsuario->nome = 'João';
   $sobreNome = $objUsuario->sobreNome = 'Silva';
   $email = $objUsuario->email = 'js@email.com';
@@ -96,9 +96,8 @@
   $login = $objUsuario->login = 'jsilva2003';
   $senha = $objUsuario->senha = 'cAd178#@_PqH';
   
-  $printarUsuario = printUser($nome, $sobreNome, $email, $seguidores, $login);
+  $printarDados = $objUsuario->printarDadosUsuario($nome, $sobreNome, $email, $seguidores, $login);
 
-  echo "{$printarUsuario}";
-
+  echo "{$printarDados}";
   
 ?>
