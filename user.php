@@ -71,24 +71,34 @@
 
   }
 
+  function printUser($nome, $sobreNome, $email, $contadorSeguidores, $login)
+  {
+
+    echo "+--------------Dados do Usuário----------------+\n";
+    echo "| Nome: {$nome}                                   |\n";
+    echo "<---------------------------------------------->\n";
+    echo "| Sobrenome: {$sobreNome}                             |\n";
+    echo "<---------------------------------------------->\n";
+    echo "| Email: {$email}                          |\n";
+    echo "<---------------------------------------------->\n";
+    echo "| Seguidores: {$contadorSeguidores}                             |\n";
+    echo "<---------------------------------------------->\n";
+    echo "| Login: {$login}                            |\n";
+    echo "*----------------------------------------------*\n";
+
+  }
+
   $objUsuario = new User();
+  $nome = $objUsuario->nome = 'João';
+  $sobreNome = $objUsuario->sobreNome = 'Silva';
+  $email = $objUsuario->email = 'js@email.com';
+  $seguidores = $objUsuario->contadorSeguidores = 1000;
+  $login = $objUsuario->login = 'jsilva2003';
+  $senha = $objUsuario->senha = 'cAd178#@_PqH';
+  
+  $printarUsuario = printUser($nome, $sobreNome, $email, $seguidores, $login);
 
-  $objUsuario->nome = 'João';
-  $objUsuario->sobreNome = 'Silva';
-  $objUsuario->email = 'js@email.com';
-  $objUsuario->contadorSeguidores = 1000;
-  $objUsuario->login = 'jsilva2003';
-  $objUsuario->senha = 'cAd178#@_PqH';
+  echo "{$printarUsuario}";
 
-  echo "+--------------Dados do Usuário----------------+\n";
-  echo "| Nome: {$objUsuario->nome}                                   |\n";
-  echo "<---------------------------------------------->\n";
-  echo "| Sobrenome: {$objUsuario->sobreNome}                             |\n";
-  echo "<---------------------------------------------->\n";
-  echo "| Email: {$objUsuario->email}                          |\n";
-  echo "<---------------------------------------------->\n";
-  echo "| Seguidores: {$objUsuario->contadorSeguidores}                             |\n";
-  echo "<---------------------------------------------->\n";
-  echo "| Login: {$objUsuario->login}                            |\n";
-  echo "*----------------------------------------------*\n";
+  
 ?>
