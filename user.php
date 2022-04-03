@@ -10,7 +10,7 @@
 
   $joelUser = new $User();
 
-  $joelUser.nome = 'Joel';
+  $joelUser->nome = 'Joel';
 
 
 
