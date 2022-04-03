@@ -1,1 +1,1 @@
-# Programação orientada à objetos com PHP
+# Programação orientada a objetos com PHP
