@@ -18,6 +18,6 @@ O exercício e prática de programação são extremamente importantes para se m
 
 
 
-![](php-elephant.jpg)
+![](assets/php-elephant.jpg)
 
 #
